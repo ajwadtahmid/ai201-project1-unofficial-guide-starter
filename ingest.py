@@ -13,9 +13,8 @@ from pathlib import Path
 from typing import List, Dict
 from sentence_transformers import SentenceTransformer
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from config import DOCS_PATH, EMBEDDING_MODEL, CHUNKS_FILE
 
-
-DOCS_PATH = "documents"
 CHUNK_SIZE = 400
 CHUNK_OVERLAP = 100
 
@@ -193,8 +192,10 @@ def inspect_chunks(documents: List[Dict], chunks: List[Dict]) -> None:
         print(f"  {src}: {len(chunk_by_source[src])} chunks")
 
 
-def save_chunks(chunks: List[Dict], output_file: str = "chunks.json") -> None:
+def save_chunks(chunks: List[Dict], output_file: str = None) -> None:
     """Save chunks to a JSON file for Milestone 4 (embedding/retrieval)."""
+    if output_file is None:
+        output_file = CHUNKS_FILE
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(chunks, f, indent=2, ensure_ascii=False)
     print(f"\n✓ Saved {len(chunks)} chunks to {output_file}")
@@ -207,8 +208,8 @@ def main():
     documents = load_documents()
 
     # Step 2: Initialize embedding model (needed for tokenizer)
-    print(f"Loading embedding model: BAAI/bge-small-en-v1.5")
-    embed_model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+    print(f"Loading embedding model: {EMBEDDING_MODEL}")
+    embed_model = SentenceTransformer(EMBEDDING_MODEL)
     print(f"✓ Model loaded (max sequence length: {embed_model.max_seq_length} tokens)\n")
 
     # Step 3: Chunk documents
