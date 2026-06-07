@@ -1,0 +1,129 @@
+URL: https://www.linkedin.com/pulse/life-lessons-what-i-learned-from-my-first-job-after-shawn-boss-mba
+
+Life Lessons: What I Learned from My First Job After College
+Shawn Boss, MBA
+Shawn Boss, MBA
+Shawn Boss, MBA
+Published Jul 9, 2020
++ Follow
+
+Your first job after graduating is often called your first ‘real’ job, in the ‘real’ world. The place where you’re responsible for you own actions, paying your bills, and otherwise adulting. I found my first job very educational, and a great experience. Sure, there were frustrating times and I had to work on some projects that didn’t suit me, but I was placed in a great environment, given training, and had a chance to grow and succeed. After five years, I was ready to take on a new challenge, but I will always remember my time with my first employer, and appreciate how I much I learned and grew. For that, I'd like to thank everyone I had the opportunity to work with and learn from.
+
+    Working 101: An Introduction to Corporate America
+
+I worked for a pretty large company, so was indoctrinated to the ‘Corporate America’ workplace. The workplace and activities of a large company often are a result of its own size and success. As a company grows larger, it becomes more efficient to hire specialists, like human resources or accounting, that would otherwise be outsourced or part of another’s responsibilities at a small firm. The larger a company gets, the more people you hire to support other staff, run facilities, or complete ancillary tasks. And there’s more need for internal support, communication, organization, and documentation for sharing and transmitting information.
+
+I remember watching the movie Office Space when I was a teenager, and I just thought it was funny at the time. I didn’t really get all of the nuanced humor and workplace references. But as I settled in to the workplace, I found that I could relate more to the movie; in a lighthearted and fun way. My first position was as a project manager, and I felt like a few different characters from the movie. I reported to multiple different people, and had to do some work that was as a result of the size of our company. I often referenced that movie (Did you get that memo? Yaa....), as a common joke for team bonding; because even though our team had to complete some extra, sometimes tedious tasks, they were often necessary due to the size of our company.
+
+I learned what it means to work in ‘Corporate America’, and what kind of work that entailed. It taught me how to function as a part of something bigger, and to work well with others. Sometimes it felt as though we were all just an employee number, but the corporate scale definitely had its benefits as well. For example, a product of the sheer size of the company was that we had extra benefits like an onsite gym, cafeteria, leisure areas, and childcare.
+
+While the goals and processes of a large firm are often different than that of a smaller one, they are usually correlated to the size of the employee base. Now I work for a medium sized company, and I wonder what it would be like to work for a small office or a startup. But every company is different, and much of the workplace environment stems from culture.
+
+     Great culture is important
+
+It’s hard to measure, difficult to create and define, but extremely important. I’ve read multiple books that discuss and emphasize this idea. A company culture defines the common values, beliefs, goals, and behaviors for the employees. A strong culture leads to a common vision, a workforce that is united and striving for the same goal. It provides a baseline for actions to be taken and a guiding set of principles to follow when decisions become ambiguous. And if you fit in with the company’s culture, you feel more comfortable and in turn are more motivated and productive.
+Culture
+
+If you don’t agree with or understand the culture, you’re likely not going to enjoy your time at work. Many companies also have a weak or poorly defined culture, which leads to people following processes and different actions in similar scenarios. People will look to defined standards, and when those don’t exist will fall back to their own values and principles to compete a task. As employees are individuals with unique thoughts and values, this can cause discord if the lack of a culture is too pervasive.
+
+    Project Management and big projects
+
+Project Management triangle of constraints
+
+My first role was that of a Project Manager. While it wasn’t the career I ultimately wanted, it did teach me a lot about business and about managing projects. I learned how to plan, manage work, coordinate timelines, communicate with multiple various stakeholders simultaneously, and split a huge project into small, consumable chunks. Working with software development, I also learned a lot about agile and lean development methodologies. I developed soft skills in this position that will help me for years to come.
+
+    SQL and database knowledge
+
+In my second role at my first company, I developed my skills that would further my career that I’m working today. Mostly this was around using SQL and working with databases and doing reporting. I had schooling on the subject in college, but real-world applications are often more complex or messy that classroom examples.
+SQL Database
+
+It was good to see how things work when the system is designed by multiple people over many years, having addressed new needs as they arose, rather than coming from a master architect with full knowledge of what is and would be. I got a lot of practice in on writing SQL queries, managing databases, and creating reports.
+
+    Professionalism
+
+Coming from college, I feel as though I had a grace period where I was allowed to get up to speed and acclimate to a work setting. You quickly learn what to do and how to act professionally. This includes knowing what is appropriate for a work setting. It can include what you talk about, who you talk to, how often you’re socializing, and even how loud to talk in an open office setting. It also includes how to dress and behave. It feels like common sense after a short time, and is essentially being mindful of others and conducting yourself respectably. It’s not too hard to do, but lacking professionalism when the situation demands it could cause you to have fewer friends, or even cost you a job.
+
+    What Not to do
+
+Contrary of what to do, I also learned what not to do. Aside from learning from my own mistakes, I was also fortunate enough to experience a toxic individual early in my career. This person was frequently negative, and consistently had an opinion on how something should be done. Disagreeing with this person was near impossible; it was their way or the highway. I personally found them difficult to work with. However, they were also good at their job and very knowledgeable, so it was hard to discredit or avoid them.
+
+I say I was fortunate to experience this early in my career because it showed me the impact of doing so. I saw firsthand how a single negative attitude could affect an entire team, and how the dynamic of the room changed based on who was in it. From these encounters, I learned how to work with people that I don’t necessarily get along with, and how to present my ideas and thoughts in an open manner. While it was not an experience I wish to replicate often, it was certainly a good learning experience from which to grow.
+
+    People want to help you
+
+People are generous and inclined to be helpful. You just have to let them; meaning, you have to be willing to accept help, advice, or suggestions. And you may have to ask for help first: no one will know you’re struggling unless you tell them. If you do, I think you’ll be pleasantly surprised at what lengths they go to in order to help you. I met a few people when reaching out in general for help via a connection or a forum. You are not an expert in everything, and that is okay. So ask for help, and be willing to both give and take it.
+
+    Navigating the Corporate world
+
+It’s a fact of work that some people seem to play the system and get promoted, even when they’re less qualified than others. They are focused on pleasing the right people, getting noticed, and on their own advancement. I’m not saying that these individuals are bad people, though it can be frustrating to see it happen when you also want that promotion. They just know how the system works better, and what it takes to advance. I personally believe that if you focus on doing good, then results will follow, but I’ve since expanded my thinking to incorporate a degree of humble self-promotion. This entails keeping track of the work you’ve done, the value you provide, and making sure it is known in an honest manner. In a performance review situation, this would simply be stating what you’ve done, what impact it’s had, and what your goals are. If you just want to get promoted, you can also watch and learn from those who seem to be able to do it. How are they doing it, and what can you emulate?
+Navigation
+
+In a corporate setting, you may also need to know how the system works and how to interact with others. For example, you may need to know the evaluation and advancement procedure, or who to go to with human resources questions or concerns. Especially as the topic becomes more sensitive, there is a right way to handle it and a wrong way. Sometimes you can go straight to your manager, and sometimes you may need to talk to human resources. Hopefully you don’t have any issues, but it’s better to know how to act in advance before something happens.
+
+    To focus on what is important
+
+There are a lot of non-value-added activities that happen in the workplace, especially at a larger company. Some of those tasks truly are necessary, and you will appreciate them down the line when a problem comes up. For example, documentation can be a pain to write, but is extremely helpful when you have to work on something created by someone else, or when you have to resolve a bug. However, this can also be taken to an extreme (too much of a good thing), or you might work on some tasks that really don’t help anybody. At that point you’re basically just keeping busy, not being productive. The solution is to focus on what is important, and on what is impactful. Try to work on projects that are most in line with your company or team goals, and further that agenda. Some tasks that seemed urgent at the time may not even be necessary or useful for more than a short period. Context switching and ‘fire drills’ (immediate and supposedly urgent requests) decrease productivity, so try to minimize or avoid them. One way to do this is to set distraction-free time on your calendar where you spend a few hours focused on a single task, often a larger project.
+Focusing is about saying No
+
+    How to say "No"
+
+Saying No is an important skill to have. This is driven by the constraint put on everyone, that you only have so much time and capacity to complete work. It keeps you from being overwhelmed with too much work, or working on the wrong things. A previous manager told me that you shouldn't just say No directly; you should do so with purpose and reason. You do so by knowing what you are working on, your deadlines, and the priorities set forth for yourself and your team. This is often a conversation to have with your manager to make sure you are working on what is most beneficial to the team and the company. For instance, imagine someone asks you to work on a status report. Instead of just saying No, effectively ending that conversation with a dissatisfied party, redirect the No and briefly explain why you can’t do what is requested. The goal is to let known the work you’re already doing and priorities in place, and why a request doesn’t change your current workload or where it otherwise sits. It would be important here to be transparent and set realistic expectations, so that whoever you’re talking to doesn’t think it’s going to be completed quickly if it isn’t. here’s some examples:
+
+“No, I can’t work on that now because I am working on the super important project. Maybe my teammate can help.”
+
+“No, I can’t work on that now because I am working on the super mega important project. I can work on it after I finish all of my other tasks in about a month.”
+
+“No, we can’t complete the project like this because the technology doesn’t allow it. Here’s what it can do…”
+
+“No, I can’t work on that because it doesn’t align with our team’s priorities. If you’d like to review those and where your request fits, please speak to my manager.”
+
+“No, I can’t do that for you, but I can show you how you can complete it yourself or point you to someone who can.”
+
+    People don’t know your schedule and priorities unless you tell them
+
+Along with saying No and asking for help when you need it, others won’t know what you’re working on and what is important to you unless you tell them. A common theme across a few of these points is to just communicate what you want and need to be successful. One way to look at this point is protecting your workload. Aside from saying No, you also need to communicate with your manager and with others what you are working on, and what the upcoming priorities are. This is important so that you know you are working on the right stuff, but also so that others know that you have a lot going on. I say this because there were many times where I felt overloaded and extremely busy at work, yet was still being requested to do more. It took me learning to speak up and tell my manager how busy I was for the work to be redirected. It’s just a good practice to set realistic expectations, so that you don’t burn out and so that you can keep up with expectations.
+
+Another way to look at this is for your own career trajectory. You are in charge of your own career; no one is going to own it for you. If you want to work on certain projects, or develop new skills, or work in a different department, then you have to let others know this and work towards your goals. If you let your manager or your network know that you are interested in being a team lead, for instance, a few things can happen. First, you can get training you need to develop relevant skills. Second, you can ask for and work on specific feedback relative to your goals. And third, your network will think of you when they have a position or project come up that aligns with what you said you wanted to do. Ask, and you shall receive. Just make sure to do the work and come through for them once you do.
+
+    How to have Crucial Conversations
+
+‘Crucial Conversations’ is a book and training course provided by Vital Smarts, who also have an ‘Influencer’ training. The training is about talking with someone about a difficult topic, or taking/ receiving difficult feedback. Often the difficult things to talk about are the most important. It goes in depth on how to have these discussions and how to think about them, so for a complete understanding it’s best to read the book and take the training yourself. The main concept is of communicating openly and honestly, without being defensive or attacking. Realize that people are often driven by emotions, and it’s not just about the words you are saying. It is important to create a safe environment, find common ground, and work together to have a productive conversation. Mostly this training brought to my awareness and defined what was happening in these intense moments, and how I could best plan for and control my own thoughts and feelings. Again, it’s a critical topic that requires more than just my one paragraph on the subject, so if you’re interested in learning more please check it out for yourself.
+
+    How to seek out and receive feedback
+
+No alt text provided for this image
+
+Praise is simply a compliment, but feedback can be both constructive and difficult to hear. Similar to how to have tough conversations, receiving feedback is not always easy. At first, I was defensive; but as I grew, I was able to take more constructive criticism. I pride myself on always striving to improve myself, so I would actively ask for feedback. Surprisingly, people often didn’t give negative feedback easily. Giving a difficult message was as difficult as receiving it. I learned that I needed to seek out and request feedback with honest intentions, otherwise I may not get information about what I need to be improving most. I also learned how to listen to this information and ask more about what and why, and work past my discomfort on hearing criticisms of my work.
+
+    Importance of Networking, both professionally and socially
+
+You may have heard “It’s not what you know, it’s who you know”. I never gave much credence to the phrase, but the accuracy of the statement rings true to me now. Partly because you can always learn more or do research to make up for what you don’t know, but also because I’ve seen the effect at play. I had always thought that I could make my way through the corporate world by being the best at what I did – do good work, and results will follow. But I’ve come to find that’s not always the case. Part of the workplace is other people knowing the value you are creating and being able to compare that to others (i.e. measurable impact), so there’s an element of humble self-promotion. But I also saw in many cases people get a position or be requested for a project because they were known by the decision maker. I’m not saying people consciously play favorites, but when looking to fill a position, human nature is to start with who you know and trust. The same applies for getting a job; it’s easier to get a job through referrals and your network than cold applying and submitting resumes through the system.
+No alt text provided for this image
+
+I also found this point emphasized when I needed help. Knowing other people with different skill sets helped me have an expert to go ask questions of when I had a problem I couldn’t solve on my own. On more than one occasion, a software engineering friend helped with a project that our team was working on.
+
+    How to work with people of varying styles
+
+Not just interacting with people, I learned that different individuals have different interaction preferences. Some liked a more direct message, some prefer electronic communication, and some did not handle criticism. Knowing that everyone has their own preferences, and meeting them there, will make you more able to communicate with them.
+
+    How to function as an adult
+
+In college, I had more free time, a more flexible schedule, and fewer responsibilities. It was certainly a good experience that introduced me to making my own decisions and being responsible. As an adult, the training wheels are off and you truly are responsible for yourself and your actions. You have more freedom, more power, and more responsibility. Primary to this for most people is having a job and working (I realize there are many different lifestyles and ways to make a living, but can only speak from my own experience). As an adult, you learn to be punctual, productive, and take care of all of the errands and chores that you may not have had to before.
+
+    How to budget
+
+With my first job outside of college, I was officially on my own. All bills and expenses were my sole responsibility; there were no more student loans, financial aid, or deferring payments due to a student status. Everything I bought, I had to budget for and pay for from my own paycheck. But since I had more money than I ever did in college, it was nice that I was finally able to go do more activities. The irony in that is while I had more free time in college, I had less (no) money; and now that I was making money, I had less free time.
+
+    How to have fun
+
+Work doesn’t have to be boring or strenuous; you can make it fun. The first and most important step is to find something that you are passionate about or have fun doing. Let that drive your career path. Barring that, you can look for fun tasks or activities in your work, things that you enjoy doing. Even though you may not enjoy every task you are responsible for completing, hopefully there are some that you find pleasure in. If not, maybe you can celebrate little wins, such as completing a project you didn’t like. I derived much enjoyment from interacting with my coworkers, going so far as to have potlucks, planned socials, or team building activities. The people you work with are often the best part of the job.
+
+    Health and nutrition
+
+One of the benefits of working at the large company that I did meant that they provided health and nutrition guidance. At the gym were multiple trainers to ensure a good workout and lead me towards an active lifestyle. They also provided athletic trainers to diagnose and rehabilitate minor injuries and bodily restrictions. Despite having a background in athletics, I learned a lot about the human body and how it works from interacting with these experts. I also had access to nutrition consultants and webinars to guide my diet decisions. Taking advantage of resources like this is a benefit I certainly enjoyed.
+
+    About myself and my personal preferences
+
+From working in a few different positions, I learned what kind of work I like to do, and what work I didn’t enjoy so much. I’m not just talking about subjects in school, but more specifically what types of tasks I would rather complete. For instance, I found that I wanted to do something, to create something that works or add value. I enjoyed contributing to a deliverable that I could directly see value from. I also discovered that I disliked being the organizer, a middleman, and excessive processes and documentation. Through my work projects, I found an enthusiasm for efficiency, automation, and creatively using data. I used that when and where possible to automate my documentation tasks and make any workflow I had to follow more efficient.
+
+From my experience, I suggest to young professionals to try out a few different roles or projects early in your career. At a large company, you can easily shift roles and responsibilities. At a smaller firm, you may be able to do so even more fluidly as the work arises. The breadth you experience initially will serve as a solid foundation on which you can build, while the depth and expertise in your chosen area will come with time as you advance in a more specialized and self-directed career path.
