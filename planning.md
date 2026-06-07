@@ -46,7 +46,7 @@ My domain is new grad job experiences and first-job success guides. They are lon
 
 **Overlap:** 100 tokens
 
-**Reasoning:** These guides are organized into distinct sections (salary/compensation, onboarding, mentorship, company culture, 90-day milestones). A 400-token chunk aligns with one cohesive subsection, preserving concept boundaries while maintaining retrieval precision. The 100-token overlap bridges section transitions to keep related advice connected. Smaller chunks would fragment concepts; larger chunks would dilute precision.
+**Reasoning:** These guides are organized into distinct sections (salary/compensation, onboarding, mentorship, company culture, 90-day milestones). A 400-token chunk aligns with one cohesive subsection, preserving concept boundaries while maintaining retrieval precision. The 100-token overlap bridges section transitions to keep related advice connected. Smaller chunks would fragment concepts; larger chunks would dilute precision. Token size is measured via the embedding model's native tokenizer (WordPiece from bge-small-en-v1.5) to prevent silent truncation.
 
 ---
 
@@ -58,11 +58,11 @@ My domain is new grad job experiences and first-job success guides. They are lon
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:** all-MiniLM-L6-v2 via sentence-transformers
+**Embedding model:** BAAI/bge-small-en-v1.5 via sentence-transformers
 
 **Top-k:** 7
 
-**Production tradeoff reflection:** If cost weren't a constraint, I'd prioritize domain-specific accuracy. General embeddings conflate career-specific language: "networking" in the context of new hires (internal relationship-building) vs. job seekers (external outreach), or "mentorship" as career guidance vs. technical skill transfer. A model fine-tuned on HR/career corpora would distinguish these nuances. Context length is secondary—my chunking strategy already handles long articles. Latency doesn't matter; users aren't waiting for real-time responses. Multilingual support could be useful for international new grads but isn't critical for V1. 
+**Production tradeoff reflection:** If cost weren't a constraint, I'd prioritize domain-specific accuracy. General embeddings conflate career-specific language: "networking" in the context of new hires (internal relationship-building) vs. job seekers (external outreach), or "mentorship" as career guidance vs. technical skill transfer. A model fine-tuned on HR/career corpora would distinguish these nuances. Context length matters for my design—bge-small at 512 tokens aligns chunk size with model capacity. Latency doesn't matter; users aren't waiting for real-time responses. Multilingual support could be useful for international new grads but isn't critical for V1. 
 
 ---
 
@@ -131,7 +131,7 @@ Ingestion        Chunking         Embedding +          Retrieval        Generati
 
 **Milestone 3 — Ingestion and chunking:**
 
-I will use Claude to generate the ingestion and chunking script. I'll give it my planning.md (specifically the Chunking Strategy section) and explain that my 10 source documents are already in plain .txt files in the /documents folder. I'll ask Claude to write a Python script that: (1) loads all .txt files from the documents folder, (2) cleans them by removing any remaining formatting or boilerplate, (3) chunks each into 400-token chunks with 100-token overlap using LangChain's RecursiveCharacterTextSplitter, and (4) outputs (source_id, chunk_index, text, metadata) tuples with source filename and chunk position preserved. After generating the script, I'll load one document manually, inspect it for cleanliness, then run the chunking script. I'll print 5 representative chunks from different sources and verify each is self-contained and answerable on its own - no HTML artifacts, fragments, or empty strings. I'll also count total chunks (should be ~30–40 across 10 documents based on corpus analysis) and check that metadata is correctly attached.
+I will use Claude to generate the ingestion and chunking script. I'll give it my planning.md (specifically the Chunking Strategy section) and explain that my 10 source documents are already in plain .txt files in the /documents folder. I'll ask Claude to write a Python script that: (1) loads all .txt files from the documents folder, (2) cleans them by removing any remaining formatting or boilerplate, (3) chunks each into 400-token chunks with 100-token overlap using LangChain's RecursiveCharacterTextSplitter with the bge-small-en-v1.5 tokenizer, and (4) outputs (source_id, chunk_index, text, metadata) tuples with source filename and chunk position preserved. After generating the script, I'll load one document manually, inspect it for cleanliness, then run the chunking script. I'll print 5 representative chunks from different sources and verify each is self-contained and answerable on its own - no HTML artifacts, fragments, or empty strings. I'll also count total chunks (should be ~65–80 across 10 documents based on corpus analysis) and check that metadata is correctly attached.
 
 **Milestone 4 — Embedding and retrieval:** 
 
