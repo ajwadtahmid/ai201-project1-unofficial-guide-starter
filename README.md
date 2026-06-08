@@ -46,6 +46,25 @@ My domain is new grad job experiences and first-job success guides. These are lo
 
 **Final chunk count:** 62 chunks across 10 documents (range: 3–15 chunks per document, averaging 330 tokens per chunk). This falls comfortably within the healthy 50–2,000 range; 62 is large enough for semantic signal but small enough for precision.
 
+### Sample Chunks
+
+Here are 5 representative chunks from different documents:
+
+**Sample 1 (Document 2 — Indeed Salary Guide)**
+> "Even if you have the necessary training, education or certifications to work in a specific role or industry, you'll likely earn significantly less at the beginning of your career than after you've had a few years of experience. Entry-level salaries indicate the base pay for individuals just starting their careers with their first job in a specific field, industry or profession."
+
+**Sample 2 (Document 5 — The Muse First Week Guide)**
+> "Whether it's your first position or your fifth, that first week at a new job can be more than a little intimidating. But this advice will make it less so. You walk through the revolving door, and suddenly you're bombarded with new faces, new processes, and new everything."
+
+**Sample 3 (Document 6 — Indeed First 90 Days)**
+> "Success during week one is about balance. You want to make a great first impression, but you shouldn't put too much pressure on yourself. This first week is primarily about observation and connection. Your goal is to learn your role, the team dynamic, and the company culture."
+
+**Sample 4 (Document 7 — The Muse Entry-to-Exec)**
+> "Mingle With Others: The more people you know in the office, the more likely you'll be on the tip of someone's tongue when a position opens up. And the stronger your professional relationships, the easier it will be to build internal visibility and credibility."
+
+**Sample 5 (Document 9 — Berkeley Exec Ed 90-Day Blueprint)**
+> "Every organization has its own unique rhythm and set of unwritten rules. Observe leadership styles, communication preferences, and decision-making structures to understand how things actually get done, not just how they're supposed to work according to the handbook."
+
 ---
 
 ## Embedding Model
@@ -55,6 +74,48 @@ My domain is new grad job experiences and first-job success guides. These are lo
 **Why this choice:** The initial spec recommended `all-MiniLM-L6-v2`, which has a 256-token max sequence length. With 400-token chunks, this model would silently truncate ~35% of each chunk before embedding, degrading retrieval precision without visible failure. BGE-small has the same speed and size class (3–4ms inference, 120MB model) but a 512-token capacity, eliminating truncation. It also ranks higher on MTEB retrieval benchmarks, improving semantic matching.
 
 **Production tradeoff reflection:** If cost and latency weren't constraints, I'd prioritize domain-specific accuracy by fine-tuning an embedding model on HR/career corpora. General embeddings conflate career-specific language: "networking" means internal relationship-building for new hires but external outreach for job seekers; "mentorship" can mean career guidance or technical skill transfer. A fine-tuned model would learn these distinctions. Context length is already solved (512 tokens supports our chunking). Multilingual support would help international new grads but isn't critical for V1. Latency is less important—users aren't waiting for real-time responses.
+
+### Retrieval Test Results
+
+**Test Query 1: "What is the average entry-level salary in the US?"**
+
+**Top 3 Retrieved Chunks:**
+1. **(Document 2, distance: 0.130)** — Strong match. "Even if you have the necessary training, education or certifications to work in a specific role or industry, you'll likely earn significantly less at the beginning of your career than after you've had a few years of experience. Entry-level salaries indicate the base pay for individuals just starting their careers..."
+   - **Relevance:** Directly answers the question by defining entry-level salaries and their purpose.
+
+2. **(Document 2, distance: 0.198)** — Moderate match. "The average annual salary for entry-level positions in the United States is $43,262 per year. Though this is the average base salary, the numbers range from as low as $40,000 to as high as $62,000 for some geographical locations and entry-level positions."
+   - **Relevance:** Provides the exact statistic requested ($43,262) with geographic variation.
+
+3. **(Document 2, distance: 0.226)** — Weak match. "Related jobs on Indeed / Part-time jobs, Full-time jobs, Remote jobs, Urgently hiring jobs..."
+   - **Relevance:** Navigation metadata; not directly relevant but from correct document.
+
+---
+
+**Test Query 2: "What should I focus on during my first week?"**
+
+**Top 3 Retrieved Chunks:**
+1. **(Document 6, distance: 0.251)** — Strong match. "Success during week one is about balance. You want to make a great first impression, but you shouldn't put too much pressure on yourself. This first week is primarily about observation and connection. Your goal is to learn your role, the team dynamic, and the company culture."
+   - **Relevance:** Directly addresses first-week priorities with specific actionable advice.
+
+2. **(Document 6, distance: 0.278)** — Moderate match. "Video: First Impressions: Ask Informed Questions. In this video, an Indeed Career Coach explains how to prepare for your first day, and shares why you should ask informed questions."
+   - **Relevance:** Covers first-day preparation and asking questions, both first-week priorities.
+
+3. **(Document 5, distance: 0.290)** — Strong match. "Whether it's your first position or your fifth, that first week at a new job can be more than a little intimidating. But this advice will make it less so. You walk through the revolving door, and suddenly you're bombarded with new faces, new processes, and new everything."
+   - **Relevance:** Acknowledges first-week challenges and frames the advice that follows.
+
+---
+
+**Test Query 3: "How do I approach building internal relationships?"**
+
+**Top 3 Retrieved Chunks:**
+1. **(Document 9, distance: 0.284)** — Strong match. "Every organization has its own unique rhythm and set of unwritten rules. Observe leadership styles, communication preferences, and decision-making structures to understand how things actually get done, not just how they're supposed to work according to the handbook."
+   - **Relevance:** Provides strategic framework for understanding organizational dynamics before building relationships.
+
+2. **(Document 7, distance: 0.314)** — Strong match. "Mingle With Others: The more people you know in the office, the more likely you'll be on the tip of someone's tongue when a position opens up. And the stronger your professional relationships, the easier it will be to build internal visibility and credibility."
+   - **Relevance:** Directly addresses relationship-building strategy and its career benefits.
+
+3. **(Document 8, distance: 0.338)** — Moderate match. "Another way to look at this is for your own career trajectory. You are in charge of your own career; no one is going to own it for you. If you want to advance, you have to be proactive about building your network and relationships."
+   - **Relevance:** Emphasizes proactive relationship-building as career ownership principle.
 
 ---
 
@@ -79,6 +140,49 @@ This prompt is implemented in `generator.py` and passed to Groq's llama-3.3-70b-
 1. **In the LLM response:** The system prompt instructs the model to cite documents. The model typically writes "According to Document X..." or "Documents Y and Z mention...".
 2. **Programmatic source list:** After generation, `generator.py` extracts unique source IDs from the retrieved chunks and returns them in a separate `sources` field. The Gradio interface displays this as "Retrieved from: Documents 2, 5" below the answer.
 3. **Double-layer attribution:** Both the answer text and the sources list are shown, so even if the LLM forgets to cite internally, sources are always visible to the user.
+
+### Example Responses
+
+**Example Response 1: Salary Question (Grounded)**
+
+**User Query:** "What is the average entry-level salary in the US?"
+
+**System Response:**
+> The average entry-level salary in the US is $43,262 per year. (Document 2) Additionally, it's mentioned that this average base salary can range from as low as $40,000 to as high as $62,000 for some geographical locations and entry-level positions. (Document 2) These variations are heavily influenced by the cost of living in your particular region or state, as well as the industry or role you are entering. (Document 2)
+>
+> **Retrieved from: Documents 2, 3**
+
+**Grounding analysis:** This response is fully grounded. All statistics ($43,262, $40-62k range) come directly from Document 2. The explanation of variation causes (region, industry) is cited to the same source. No general knowledge is used.
+
+---
+
+**Example Response 2: First 90 Days (Grounded)**
+
+**User Query:** "How should I approach my first 90 days?"
+
+**System Response:**
+> To approach your first 90 days effectively, set the stage before day one by deepening your understanding of the organization's culture, key stakeholders, and informal dynamics. (Document 9) Plan to ask the right questions during your first days about current priorities, team structure, and decision-making processes. (Document 5, Document 6)
+>
+> Focus on three phases: Week 1 is about observation and connection—learning your role, team dynamics, and company culture without putting pressure on yourself. (Document 6) Month 1 extends this to understanding workplace navigation and starting to add value. (Document 6) By 90 days, you should have established relationships across the organization, identified key stakeholders, and made early contributions that demonstrate reliability and cultural fit. (Document 9, Document 10)
+>
+> **Retrieved from: Documents 10, 5, 6, 9**
+
+**Grounding analysis:** Every piece of advice is traced to a document. The three-phase structure comes from Documents 5 and 6. The emphasis on understanding culture and stakeholders is from Document 9. Nothing is inferred or general knowledge—all recommendations cite sources.
+
+---
+
+**Example Response 3: Out-of-Scope Question (Refusal)**
+
+**User Query:** "What's the best way to negotiate severance packages?"
+
+**System Response:**
+> I don't have enough information on that topic based on the provided documents. The documents mention severance pay, but only in the context of employers offering it to laid-off employees as a voluntary benefit (Document 4). There is no information provided about negotiating severance terms, packages, or strategies. 
+>
+> To get guidance on severance negotiation, you would need to consult resources specifically focused on that topic.
+>
+> **Retrieved from: Document 4**
+
+**Refusal analysis:** The system correctly declines to answer, even though it found a tangentially related mention (severance as a benefit type). It explicitly states the gap: the documents don't cover negotiation. It doesn't generate plausible-sounding advice from general knowledge—it honestly says it lacks the information.
 
 ---
 
