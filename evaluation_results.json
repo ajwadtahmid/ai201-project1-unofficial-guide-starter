@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "question": "What is the average entry-level salary in the US, and what are three factors that cause variation?",
+    "expected": "~$43,000-$45,000 base; variation by state, industry/profession, and individual negotiation. Sources should cite Indeed and mention that Gen Z expects $101k but reality is ~$68k.",
+    "actual_answer": "The average entry-level salary in the US is $43,262 per year, according to Document 2. This document also states that the average base salary can range from as low as $40,000 to as high as $62,000 for some geographical locations and entry-level positions.\n\nThree factors that cause variation in entry-level salaries are:\n\n1. Geographical location: Document 2 mentions that entry-level wages are heavily influenced by the cost of living in a particular region or state.\n2. Industry or role: Document 2 states that entry-level positions that require more technical skills, advanced education, and/or training typically pay more than positions with less stringent prerequisites for employment.\n3. Employer: Document 2 notes that the employer offering the position can also impact the entry-level salary, with some companies paying more than others for similar roles.\n\nAll of this information is found in Document 2.",
+    "sources": [
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What are the top 5 things new hires should focus on during their first week?",
+    "expected": "Be observant, offer to help, find a mentor, keep boss informed, don't compare to previous jobs. Should emphasize listening and relationship-building over proving yourself.",
+    "actual_answer": "Based on the provided documents, the top 5 things new hires should focus on during their first week are:\n\n1. Absorbing everything and getting to know the company's culture, teammates, and goals (Document 5).\n2. Introducing themselves frequently and making a great first impression (Document 6).\n3. Seeking out a friend or colleague to lunch or coffee to develop a trusted relationship (Document 6).\n4. Learning how to navigate and enjoy the new workplace, including locating amenities and establishing routines (Document 6).\n5. Adding value by soaking up information, identifying areas to contribute, and considering ways to address the manager's biggest pain points (Document 6).\n\nI drew the answer from Documents 5 and 6.",
+    "sources": [
+      "5",
+      "6"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "How should a new employee approach building internal relationships and finding a mentor in their first 90 days?",
+    "expected": "Volunteer for cross-team projects, ask meaningful questions about colleagues' work, schedule regular check-ins with manager, identify key stakeholders, and proactively seek out potential mentors.",
+    "actual_answer": "To approach building internal relationships and finding a mentor in the first 90 days, a new employee should be proactive and intentional. According to Document 5, it's essential to \"find a mentor\" and have candid conversations with people who can offer valuable advice and insight about the company and opportunities. However, it's also important not to \"rely only on your new mentor\" and to be sensitive to the time and tasks of others (Document 5).\n\nDocument 7 suggests \"mingling with others\" and socializing with colleagues to get to know them and learn about different departments and career paths. It also recommends finding a mentor, either through a company program or by initiating a relationship with someone who can offer guidance and support.\n\nAdditionally, Document 9 emphasizes the importance of \"building connections at work\" and being attuned to the organization's culture and nuances. It suggests observing leadership styles, communication preferences, and decision-making structures to adapt and build influence within the organization.\n\nOverall, a new employee should approach building internal relationships and finding a mentor by being proactive, curious, and respectful, while also being mindful of the time and tasks of others. (Documents 5, 7, and 9)",
+    "sources": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What components beyond base salary should you evaluate when comparing job offers?",
+    "expected": "Health insurance, 401(k) matching, PTO, bonuses, stock options, tuition reimbursement, professional development, remote work flexibility. Total compensation often comprises 30%+ of base salary.",
+    "actual_answer": "When comparing job offers, components beyond base salary that you should evaluate include the company's benefits, vacation time, culture, and other perks. (Document 2) It's also beneficial to analyze the long-term benefits that the particular employer or position could provide, such as the potential impact on your resume and career in the future. (Document 2) Additionally, considering the company's mission, values, and vision, as well as opportunities for growth and development, can be important factors in evaluating a job offer. (Document 3) \n\nI drew the answer from Document 2 and Document 3.",
+    "sources": [
+      "2",
+      "3",
+      "7"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What are three common mistakes new grads make in their first months, and how should they avoid them?",
+    "expected": "Comparing yourself to others unfairly, trying to prove yourself too fast instead of learning, and not asking questions. Should emphasize patience, humility, and asking for help explicitly.",
+    "actual_answer": "Based on the provided documents, three common mistakes new grads make in their first months are:\n\n1. Not being reliable and missing deadlines (Document 1: \"Forget Personal Branding. Just Be Reliable\" - This section emphasizes the importance of being reliable and following through on commitments.)\n2. Overcommitting themselves and appearing overwhelmed (Document 5: \"Don\u2019t: Overcommit Yourself\" - This section advises new hires to balance their schedule and not take on too much.)\n3. Being afraid to speak up and contribute (Document 5: \"Don\u2019t: Be Afraid to Speak Up\" - This section encourages new hires to ask questions, make suggestions, and share their knowledge.)\n\nTo avoid these mistakes, new grads should focus on being reliable, managing their time effectively, and being open to learning and contributing to their team. (Documents 1 and 5)",
+    "sources": [
+      "1",
+      "5",
+      "6"
+    ]
+  }
+]
