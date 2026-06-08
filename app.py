@@ -76,14 +76,11 @@ with gr.Blocks(
             """)
 
             example_questions = [
-                "What is the average entry-level salary in the US?",
-                "What are the top 5 things to focus on in my first week?",
-                "How should I approach building internal relationships?",
-                "What should I evaluate beyond base salary?",
-                "What are common mistakes new grads make?",
-                "How do I find a mentor in my first 90 days?",
-                "What does total compensation include?",
-                "How can I succeed in my first 30 days?",
+                "What is the average entry-level salary in the US, and what are three factors that cause variation?",
+                "What are the top 5 things new hires should focus on during their first week?",
+                "How should a new employee approach building internal relationships and finding a mentor in their first 90 days?",
+                "What components beyond base salary should you evaluate when comparing job offers?",
+                "What are three common mistakes new grads make in their first months, and how should they avoid them?",
             ]
 
             for i, example in enumerate(example_questions):

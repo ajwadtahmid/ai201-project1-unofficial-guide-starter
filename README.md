@@ -143,46 +143,57 @@ This prompt is implemented in `generator.py` and passed to Groq's llama-3.3-70b-
 
 ### Example Responses
 
-**Example Response 1: Salary Question (Grounded)**
+**Example Response 1 (Evaluation Q1): Salary Question (Grounded)**
 
-**User Query:** "What is the average entry-level salary in the US?"
+**User Query:** "What is the average entry-level salary in the US, and what are three factors that cause variation?"
 
 **System Response:**
-> The average entry-level salary in the US is $43,262 per year. (Document 2) Additionally, it's mentioned that this average base salary can range from as low as $40,000 to as high as $62,000 for some geographical locations and entry-level positions. (Document 2) These variations are heavily influenced by the cost of living in your particular region or state, as well as the industry or role you are entering. (Document 2)
+> The average entry-level salary in the US is $43,262 per year. (Document 2) Additionally, it's mentioned that this average base salary can range from as low as $40,000 to as high as $62,000 for some geographical locations and entry-level positions. (Document 2)
+>
+> Three factors that cause variation in entry-level salaries are:
+> 1. **Geographical location:** Entry-level wages are heavily influenced by the cost of living in your particular region or state. (Document 2)
+> 2. **Industry or role:** Entry-level positions that require more technical skills, advanced education, and/or training typically pay more than positions with less stringent prerequisites for employment. (Document 2)
+> 3. **Employer:** The employer offering the position can impact the entry-level salary, with some companies paying more than others for similar roles. (Document 2)
 >
 > **Retrieved from: Documents 2, 3**
 
-**Grounding analysis:** This response is fully grounded. All statistics ($43,262, $40-62k range) come directly from Document 2. The explanation of variation causes (region, industry) is cited to the same source. No general knowledge is used.
+**Grounding analysis:** All statistics and factors come directly from the source documents. The $43,262 figure, the range, and the three variation factors are explicitly stated. No inference or general knowledge is used.
 
 ---
 
-**Example Response 2: First 90 Days (Grounded)**
+**Example Response 2 (Evaluation Q3): Building Relationships (Grounded)**
 
-**User Query:** "How should I approach my first 90 days?"
+**User Query:** "How should a new employee approach building internal relationships and finding a mentor in their first 90 days?"
 
 **System Response:**
-> To approach your first 90 days effectively, set the stage before day one by deepening your understanding of the organization's culture, key stakeholders, and informal dynamics. (Document 9) Plan to ask the right questions during your first days about current priorities, team structure, and decision-making processes. (Document 5, Document 6)
+> To approach building internal relationships and finding a mentor in the first 90 days, a new employee should be proactive and intentional. According to the documents, it's essential to "find a mentor" and have candid conversations with people who can offer valuable advice and insight about the company and opportunities. (Document 5)
 >
-> Focus on three phases: Week 1 is about observation and connection—learning your role, team dynamics, and company culture without putting pressure on yourself. (Document 6) Month 1 extends this to understanding workplace navigation and starting to add value. (Document 6) By 90 days, you should have established relationships across the organization, identified key stakeholders, and made early contributions that demonstrate reliability and cultural fit. (Document 9, Document 10)
+> However, it's also important not to "rely only on your new mentor" and to be sensitive to the time and tasks of others. (Document 5) Additionally, the documents recommend "mingling with others" and socializing with colleagues to get to know them and learn about different departments and career paths. The more people you know in the office, the more likely you'll be on the tip of someone's tongue when a position opens up. (Document 7)
 >
-> **Retrieved from: Documents 10, 5, 6, 9**
+> Building connections at work means being attuned to the organization's culture and nuances. Observe leadership styles, communication preferences, and decision-making structures to understand how things actually get done and to build influence within the organization. (Document 9)
+>
+> **Retrieved from: Documents 5, 7, 9**
 
-**Grounding analysis:** Every piece of advice is traced to a document. The three-phase structure comes from Documents 5 and 6. The emphasis on understanding culture and stakeholders is from Document 9. Nothing is inferred or general knowledge—all recommendations cite sources.
+**Grounding analysis:** The response integrates advice from multiple documents while maintaining citations. Each recommendation (finding a mentor, not over-relying on one mentor, mingling, observing culture) is attributed to specific sources. The synthesis is grounded—no speculative advice is added.
 
 ---
 
-**Example Response 3: Out-of-Scope Question (Refusal)**
+**Example Response 3 (Evaluation Q5 — Failure Case): Common Mistakes (Partially Grounded, Shows Corpus Limitation)**
 
-**User Query:** "What's the best way to negotiate severance packages?"
+**User Query:** "What are three common mistakes new grads make in their first months, and how should they avoid them?"
 
 **System Response:**
-> I don't have enough information on that topic based on the provided documents. The documents mention severance pay, but only in the context of employers offering it to laid-off employees as a voluntary benefit (Document 4). There is no information provided about negotiating severance terms, packages, or strategies. 
+> Based on the provided documents, three common mistakes new grads make in their first months are:
 >
-> To get guidance on severance negotiation, you would need to consult resources specifically focused on that topic.
+> 1. **Not being reliable and missing deadlines:** Focus on being reliable and following through on commitments. This section emphasizes the importance of being reliable and following through on commitments. (Document 1)
+> 2. **Overcommitting themselves and appearing overwhelmed:** Avoid overcommitting yourself. Balance your schedule and don't take on too much. (Document 5)
+> 3. **Being afraid to speak up and contribute:** Ask questions, make suggestions, and share your knowledge. Don't be afraid to contribute to your team. (Document 5)
 >
-> **Retrieved from: Document 4**
+> To avoid these mistakes, new grads should focus on being reliable, managing their time effectively, and being open to learning and contributing to their team. (Documents 1, 5)
+>
+> **Retrieved from: Documents 1, 5, 6**
 
-**Refusal analysis:** The system correctly declines to answer, even though it found a tangentially related mention (severance as a benefit type). It explicitly states the gap: the documents don't cover negotiation. It doesn't generate plausible-sounding advice from general knowledge—it honestly says it lacks the information.
+**Grounding analysis (Corpus Limitation):** This response is technically grounded—all statements come from the documents. However, the evaluation plan expected different mistakes: "comparing yourself to others unfairly, trying to prove yourself too fast instead of learning, and not asking questions." The retrieved documents contain *different* mistakes than expected. This reveals a corpus-content mismatch rather than a retrieval or generation failure. See Failure Case Analysis for details.
 
 ---
 
